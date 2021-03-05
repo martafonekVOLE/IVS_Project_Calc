@@ -19,30 +19,36 @@
                 <input type="button" value="8" onclick="insertNumber(8)">
                 <input type="button" value="9" onclick="insertNumber(9)">
                 <input type="button" value="+" onclick="operation(1)">
+                <input type="button" value="F1" onclick="">
             
                 <input type="button" value="4" onclick="insertNumber(4)">
                 <input type="button" value="5" onclick="insertNumber(5)">
                 <input type="button" value="6" onclick="insertNumber(6)">
                 <input type="button" value="-" onclick="operation(2)">
+                <input type="button" value="F2" onclick="">
             
                 <input type="button" value="1" onclick="insertNumber(1)">
                 <input type="button" value="2" onclick="insertNumber(2)">
                 <input type="button" value="3" onclick="insertNumber(3)">
                 <input type="button" value="x" onclick="operation(3)">
+                <input type="button" value="F3" onclick="">
             
                 <input type="button" value="C" onclick="eraseAll()">
                 <input type="button" value="0" onclick="insertNumber(0)">
                 <input type="button" value="." onclick="insertNumber(',')">
                 <input type="button" value="÷" onclick="operation(4)">
+                <input type="button" value="F4" onclick="">
             
                 <input type="button" class="result" value="=" onclick="result()">
                 <input type="button" value="^" onclick="operation(5)">
+                <input type="button" value="ANS" onclick="getAns()">
             
         </div>
     </div>
 
 </body>
 <script>
+    /*** Inserts Number into inputField ***/
     function insertNumber(number){
         if(NumbersAndOperation.calculated == 1){
             eraseAll();
@@ -52,11 +58,14 @@
         }
         document.getElementById('inputField').innerHTML = document.getElementById('inputField').innerHTML + number;
     }
+    /*** Erases All the fields ***/
     function eraseAll(){
         document.getElementById('inputField').innerHTML = '';
         document.getElementById('intermediate').innerHTML = '';
     }
+    /***Object***/
     var NumbersAndOperation = {};
+    /***Identifies Operator and printf onto intermediate Display*/
     function operation(operator){
         NumbersAndOperation.operator = operator;
         var test = document.getElementById('inputField').innerHTML;
@@ -75,6 +84,7 @@
         }
         
     }
+    /***Getting result***/
     function result(){
         var firstNumber = NumbersAndOperation.firstNumber;
         var secondNumber = document.getElementById('inputField').innerHTML;;
@@ -84,6 +94,9 @@
             var resultOfOperation = +secondNumber + +firstNumber;
             document.getElementById('inputField').innerHTML = resultOfOperation;
             NumbersAndOperation.calculated = 1;
+            NumbersAndOperation.Ans = resultOfOperation;
+            NumbersAndOperation.Ans1 = firstNumber;
+            NumbersAndOperation.Ans2 = secondNumber;
         } 
         if(NumbersAndOperation.operator==2){
             /*Odčítání*/
@@ -93,6 +106,13 @@
         }
         if(NumbersAndOperation.operator==4){
             /*Dělení*/
+        }
+    }
+    function getAns(){
+        NumbersAndOperation.calculated = 1;
+        document.getElementById('inputField').innerHTML = NumbersAndOperation.Ans;
+        if(NumbersAndOperation.operator == 1){
+        document.getElementById('intermediate').innerHTML = NumbersAndOperation.Ans1 + "+" +NumbersAndOperation.Ans2+ "=" + NumbersAndOperation.Ans;
         }
     }
 </script>

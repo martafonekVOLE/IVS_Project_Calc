@@ -16,15 +16,15 @@ body{
     min-height: 100vh;
 }
 .keys{
-    width: 300px;
+    width: 350px;
     height: auto;
     margin: 100px auto;
     padding: 20px 20px 9px;
     border-radius: 5px;
 }
 .keys input[type=button]{
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     font-size: 25px;
     margin: 2px;
     float: left;
@@ -44,7 +44,7 @@ body{
     top: 4px;
 }
 .keys input[type=button].result{
-    width: 165px;
+    width: 179px;
 }
 .inputField{
     width: 220px;
@@ -55,7 +55,7 @@ body{
 }
 .screen{
     height: 50px;
-    width: 220px;
+    width: 304px;
     padding: 5px 10px;
     background: rgba(154,185,188,0.8);
     border-radius: 0 0 5px 5px;
