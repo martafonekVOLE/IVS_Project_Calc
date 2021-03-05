@@ -12,7 +12,8 @@
         
         <div class="keys">
             <form name="form">
-                <input type="text" class="inputField" name="inputField" readonly>
+                <div class="screen" id="intermediate" style="margin-bottom: 0px; border-radius: 5px 5px 0 0;"></div>
+                <div id="inputField" class="screen"> </div>
             </form>
                 <input type="button" value="7" onclick="insertNumber(7)">
                 <input type="button" value="8" onclick="insertNumber(8)">
@@ -43,31 +44,46 @@
 </body>
 <script>
     function insertNumber(number){
-        document.form.inputField.value = document.form.inputField.value+number;
+        if(NumbersAndOperation.calculated == 1){
+            eraseAll();
+            NumbersAndOperation.calculated = 0;
+        }
+        else{
+        }
+        document.getElementById('inputField').innerHTML = document.getElementById('inputField').innerHTML + number;
     }
     function eraseAll(){
-        document.form.inputField.value = "";
+        document.getElementById('inputField').innerHTML = '';
+        document.getElementById('intermediate').innerHTML = '';
     }
     var NumbersAndOperation = {};
     function operation(operator){
-        var test = document.form.inputField.value;
+        NumbersAndOperation.operator = operator;
+        var test = document.getElementById('inputField').innerHTML;
         var firstNumber;
         if(test==""){
-
+            alert('NULL');
         }
         else{
-            NumbersAndOperation.firstNumber = document.form.inputField.value;
+            NumbersAndOperation.firstNumber = document.getElementById('inputField').innerHTML;
+        
+        document.getElementById('intermediate').innerHTML = document.getElementById('inputField').innerHTML; 
+        document.getElementById('inputField').innerHTML = '';
         }
-        document.form.inputField.value = "";
-        NumbersAndOperation.operator = operator;
+        if(operator==1){
+            document.getElementById('intermediate').innerHTML = document.getElementById('intermediate').innerHTML + '+';
+        }
+        
     }
     function result(){
         var firstNumber = NumbersAndOperation.firstNumber;
-        var secondNumber = document.form.inputField.value;
+        var secondNumber = document.getElementById('inputField').innerHTML;;
+        document.getElementById('intermediate').innerHTML = document.getElementById('intermediate').innerHTML + secondNumber;
         if(NumbersAndOperation.operator==1){
             /*Sčítání*/
             var resultOfOperation = +secondNumber + +firstNumber;
-            alert(resultOfOperation);
+            document.getElementById('inputField').innerHTML = resultOfOperation;
+            NumbersAndOperation.calculated = 1;
         } 
         if(NumbersAndOperation.operator==2){
             /*Odčítání*/
