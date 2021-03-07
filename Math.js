@@ -1,4 +1,7 @@
-
+/* 
+    @author : Krištof Šiška
+    @licence : GNU General Public License v3
+*/
 
 /* JS MATH LIBRARY FOR IVS */
 
@@ -60,12 +63,28 @@ function factorial(a){
     }
     return res;
 }
+
 /* @brief Repeated multiplication of a base to the power of exponent 
    @param {double} Base
    @param {double} Exponent
    @return Returns the 1st num raised to the power of the 2nd num 
 */
-function toPower(a,b){
+function toPower(a , b){
     return a^b;
 }
 
+/* @brief Function to return the square root of a number
+   @param {double}
+   @return {double} Returns  the square root of a given number  
+ */
+function squareRoot(a){
+    return Math.sqrt(a);
+}
+
+/* @brief Function to return logarithm to the base of 10
+   @param {double}
+   @return {double} Returns the logarithm to the base of 10 of a given number 
+*/
+function logarithm(a){
+    return Math.log10(a);
+}
