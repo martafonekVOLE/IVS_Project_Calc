@@ -5,7 +5,7 @@
 
 /* JS MATH LIBRARY FOR IVS */
 
-/* @ Adds up 2 numbers 
+/* @function Adds up 2 numbers 
    @param {double} 1st number
    @param {double} 2nd number
    @return Returns sum of the 2 numbers 
@@ -14,7 +14,7 @@ function addUp(a , b) {
     return a + b;
 }
 
-/* @Brief Subtracts 2nd number from the 1st
+/* @function Subtracts 2nd number from the 1st
    @param {double} Number to be subtracted from
    @param {double} Number to be subtracted
    @return Returns difference between num 1 and num 2 
@@ -23,7 +23,7 @@ function subtract(a , b) {
     return a - b;
 }
 
-/* @brief Multiplies the 2 numbres
+/* @function Multiplies the 2 numbres
    @param {double} 1st number 
    @param {double} 2nd number
    @return Returns the multiplication value of the 2 numbers 
@@ -32,7 +32,7 @@ function multiply(a , b){
     return a * b;
 }
 
-/* @brief Divides 2 numbers
+/* @function Divides 2 numbers
    @param {double} divident
    @param {double} divisor
    @return Returns Quotient of the 2 numbers 
@@ -46,7 +46,7 @@ function divide(a , b){
     return a/b;
 }
 
-/* @brief Product of all integers <= a 
+/* @function Product of all integers <= a 
    @param {int} Highest integer
    @return Returns the factorial of a number 
 */
@@ -64,7 +64,7 @@ function factorial(a){
     return res;
 }
 
-/* @brief Repeated multiplication of a base to the power of exponent 
+/* @function Repeated multiplication of a base to the power of exponent 
    @param {double} Base
    @param {double} Exponent
    @return Returns the 1st num raised to the power of the 2nd num 
@@ -73,7 +73,7 @@ function toPower(a , b){
     return a^b;
 }
 
-/* @brief Function to return the square root of a number
+/* @function Function to return the square root of a number
    @param {double}
    @return {double} Returns  the square root of a given number  
  */
@@ -81,7 +81,7 @@ function squareRoot(a){
     return Math.sqrt(a);
 }
 
-/* @brief Function to return logarithm to the base of 10
+/* @function Function to return logarithm to the base of 10
    @param {double}
    @return {double} Returns the logarithm to the base of 10 of a given number 
 */
