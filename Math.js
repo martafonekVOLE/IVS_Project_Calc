@@ -70,7 +70,7 @@ function factorial(a){
    @return Returns the 1st num raised to the power of the 2nd num 
 */
 function toPower(a , b){
-    return a^b;
+    return Math.toPower(a , b);
 }
 
 /* @function Function to return the square root of a number
@@ -88,3 +88,14 @@ function squareRoot(a){
 function logarithm(a){
     return Math.log10(a);
 }
+
+
+
+/* @function Function to return absolute value of a number
+   @param {double}
+   @return {double} Returns the absolute value of a number 
+*/
+function abs(a){
+    return Math.abs(a);
+}
+
