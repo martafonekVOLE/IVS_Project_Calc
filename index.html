@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator IVS 2021</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        
+        <div class="keys">
+            <form name="form">
+                <div class="screen" id="intermediate" style="margin-bottom: 0px; border-radius: 5px 5px 0 0;"></div>
+                <div id="inputField" class="screen"> </div>
+            </form>
+                <input type="button" value="7" onclick="insertNumber(7)">
+                <input type="button" value="8" onclick="insertNumber(8)">
+                <input type="button" value="9" onclick="insertNumber(9)">
+                <input type="button" value="+" onclick="operation(1)">
+                <input type="button" value="F1" onclick="">
+            
+                <input type="button" value="4" onclick="insertNumber(4)">
+                <input type="button" value="5" onclick="insertNumber(5)">
+                <input type="button" value="6" onclick="insertNumber(6)">
+                <input type="button" value="-" onclick="operation(2)">
+                <input type="button" value="F2" onclick="">
+            
+                <input type="button" value="1" onclick="insertNumber(1)">
+                <input type="button" value="2" onclick="insertNumber(2)">
+                <input type="button" value="3" onclick="insertNumber(3)">
+                <input type="button" value="x" onclick="operation(3)">
+                <input type="button" value="F3" onclick="">
+            
+                <input type="button" value="C" onclick="eraseAll()">
+                <input type="button" value="0" onclick="insertNumber(0)">
+                <input type="button" value="." onclick="insertNumber(',')">
+                <input type="button" value="÷" onclick="operation(4)">
+                <input type="button" value="F4" onclick="">
+            
+                <input type="button" class="result" value="=" onclick="result()">
+                <input type="button" value="^" onclick="operation(5)">
+                <input type="button" value="ANS" onclick="getAns()">
+            
+        </div>
+    </div>
+
+</body>
+<script>
+    /*** Inserts Number into inputField ***/
+    function insertNumber(number){
+        if(NumbersAndOperation.calculated == 1){
+            eraseAll();
+            NumbersAndOperation.calculated = 0;
+        }
+        else{
+        }
+        document.getElementById('inputField').innerHTML = document.getElementById('inputField').innerHTML + number;
+    }
+    /*** Erases All the fields ***/
+    function eraseAll(){
+        document.getElementById('inputField').innerHTML = '';
+        document.getElementById('intermediate').innerHTML = '';
+    }
+    /***Object***/
+    var NumbersAndOperation = {};
+    /***Identifies Operator and printf onto intermediate Display*/
+    function operation(operator){
+        NumbersAndOperation.operator = operator;
+        var test = document.getElementById('inputField').innerHTML;
+        var firstNumber;
+        if(test==""){
+            alert('NULL');
+        }
+        else{
+            NumbersAndOperation.firstNumber = document.getElementById('inputField').innerHTML;
+        
+        document.getElementById('intermediate').innerHTML = document.getElementById('inputField').innerHTML; 
+        document.getElementById('inputField').innerHTML = '';
+        }
+        if(operator==1){
+            document.getElementById('intermediate').innerHTML = document.getElementById('intermediate').innerHTML + '+';
+        }
+        
+    }
+    /***Getting result***/
+    function result(){
+        var firstNumber = NumbersAndOperation.firstNumber;
+        var secondNumber = document.getElementById('inputField').innerHTML;;
+        document.getElementById('intermediate').innerHTML = document.getElementById('intermediate').innerHTML + secondNumber;
+        if(NumbersAndOperation.operator==1){
+            /*Sčítání*/
+            var resultOfOperation = +secondNumber + +firstNumber;
+            document.getElementById('inputField').innerHTML = resultOfOperation;
+            NumbersAndOperation.calculated = 1;
+            NumbersAndOperation.Ans = resultOfOperation;
+            NumbersAndOperation.Ans1 = firstNumber;
+            NumbersAndOperation.Ans2 = secondNumber;
+        } 
+        if(NumbersAndOperation.operator==2){
+            /*Odčítání*/
+        }
+        if(NumbersAndOperation.operator==3){
+            /*Násobení*/
+        }
+        if(NumbersAndOperation.operator==4){
+            /*Dělení*/
+        }
+    }
+    function getAns(){
+        NumbersAndOperation.calculated = 1;
+        document.getElementById('inputField').innerHTML = NumbersAndOperation.Ans;
+        if(NumbersAndOperation.operator == 1){
+        document.getElementById('intermediate').innerHTML = NumbersAndOperation.Ans1 + "+" +NumbersAndOperation.Ans2+ "=" + NumbersAndOperation.Ans;
+        }
+    }
+    document.addEventListener('keydown', function(event) {
+    if (event.keyCode == 48 || event.keyCode == 96) {
+        insertNumber(0);
+    }
+    else if (event.keyCode == 49 || event.keyCode == 97) {
+        insertNumber(1);
+    }
+    else if (event.keyCode == 50 || event.keyCode == 98) {
+        insertNumber(2);
+    }
+    else if (event.keyCode == 51 || event.keyCode == 99) {
+        insertNumber(3);
+    }
+    else if (event.keyCode == 52 || event.keyCode == 100) {
+        insertNumber(4);
+    }
+    else if (event.keyCode == 53 || event.keyCode == 101) {
+        insertNumber(5);
+    }
+    else if (event.keyCode == 54 || event.keyCode == 102) {
+        insertNumber(6);
+    }
+    else if (event.keyCode == 55 || event.keyCode == 103) {
+        insertNumber(7);
+    }
+    else if (event.keyCode == 56 || event.keyCode == 104) {
+        insertNumber(8);
+    }
+    else if (event.keyCode == 57 || event.keyCode == 105) {
+        insertNumber(9);
+    }
+    else if(event.keyCode == 107){
+        operation(1);
+    }
+    else if(event.keyCode == 109){
+        operation(2);
+    }
+    else if(event.keyCode == 106){
+        operation(3);
+    }
+    else if(event.keyCode == 111){
+        operation(4);
+    }
+    else if(event.keyCode == 13 || event.keyCode == 187 || event.keyCode == 191){
+        result();
+    }
+}, true);
+</script>
+</html>
