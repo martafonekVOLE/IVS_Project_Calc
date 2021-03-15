@@ -4,6 +4,22 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins';
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    height: 8px;
+    background: rgba(154,185,188,0.8);
+    border-radius: 0 0 5px 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #27dbba;
+    border: 1px solid #000;
+    border-radius: 8px 8px 8px 8px; 
+}
+::-webkit-scrollbar-thumb:active {
+    background: #1eac92ab;
+    border: 1px solid #000;
+    border-radius: 8px 8px 8px 8px; 
 }
 html{
     width: 600px;
@@ -64,5 +80,6 @@ body{
     text-align: center;
     overflow: auto;
     text-align: right;
+    overflow-y: hidden;   
 }
 
