@@ -43,9 +43,7 @@ function multiply(a , b){
 */
 function divide(a , b){
     if (b == 0){
-        throw{
-            //TODO 
-        }
+       throw "Division by 0 is undefined"
     }
     return a/b;
 }
@@ -57,10 +55,14 @@ function divide(a , b){
 */
 function factorial(a){
     if (a < 0){
-        throw {
-            // TODO
-        }
+        throw "Factorial must be natural integer"
     }
+    
+    
+    if (a % 1 != 0){
+        throw "Factorial must be decimal number"
+    }
+ 
     let i = 2;
     let res = 1;
     for (i = 2; i <= a; i++){
@@ -85,6 +87,9 @@ function toPower(a , b){
  *  @return {double} Returns  the square root of a given number  
  */
 function squareRoot(a){
+    if (a < 0){
+        throw "Square root of numbers < 0 doesnt exists"
+    }
     return Math.sqrt(a);
 }
 
@@ -94,6 +99,9 @@ function squareRoot(a){
  *  @return {double} Returns the logarithm to the base of 10 of a given number 
 */
 function logarithm(a){
+    if (a < 0){
+        throw "logarithm of numbers < 0 doesnt exists"
+    }
     return Math.log(a);
 }
 
@@ -105,4 +113,6 @@ function logarithm(a){
 function abs(a){
     return Math.abs(a);
 }
+
+/* End of JS MATH LIBRARY */
 
