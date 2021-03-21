@@ -32,7 +32,7 @@ function operation(operator){
         alert('NULL');
     }
     else{
-        NumbersAndOperation.firstNumber = document.getElementById('inputField').innerHTML;
+        NumbersAndOperation.firstNumber = parseFloat(document.getElementById('inputField').innerHTML);
     
     document.getElementById('intermediate').innerHTML = document.getElementById('inputField').innerHTML; 
     document.getElementById('inputField').innerHTML = '';
@@ -59,7 +59,8 @@ function operation(operator){
 /***Getting result***/
 function result(){
     var firstNumber = NumbersAndOperation.firstNumber;
-    var secondNumber = document.getElementById('inputField').innerHTML;;
+    var secondNumber = parseFloat(document.getElementById('inputField').innerHTML);
+    
     document.getElementById('intermediate').innerHTML = document.getElementById('intermediate').innerHTML + secondNumber;
     if(NumbersAndOperation.operator==1){
         /*Sčítání*/
