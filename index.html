@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator IVS 2021</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+
+        <div class="keys">
+            <form name="form">
+                <div class="screen" id="intermediate" style="margin-bottom: 0px; border-radius: 5px 5px 0 0;"></div>
+                <div id="inputField" class="screen"> </div>
+            </form>
+                <input type="button" value="7" onclick="insertNumber(7)">
+                <input type="button" value="8" onclick="insertNumber(8)">
+                <input type="button" value="9" onclick="insertNumber(9)">
+                <input type="button" value="+" onclick="operation(1)">
+                <input type="button" value="n!" onclick="operation(9)">
+
+                <input type="button" value="4" onclick="insertNumber(4)">
+                <input type="button" value="5" onclick="insertNumber(5)">
+                <input type="button" value="6" onclick="insertNumber(6)">
+                <input type="button" value="-" onclick="operation(2)">
+                <input type="button" value="log" onclick="operation(7)">
+
+                <input type="button" value="1" onclick="insertNumber(1)">
+                <input type="button" value="2" onclick="insertNumber(2)">
+                <input type="button" value="3" onclick="insertNumber(3)">
+                <input type="button" value="x" onclick="operation(3)">
+                <input type="button" value="|n|" onclick="operation(8)">
+
+                <input type="button" value="C" onclick="eraseAll()">
+                <input type="button" value="0" onclick="insertNumber(0)">
+                <input type="button" value="." onclick="insertNumber('.')">
+                <input type="button" value="÷" onclick="operation(4)">
+                <input type="button" value="^" onclick="operation(5)">
+
+                <input type="button" class="result" value="=" onclick="result()">
+                <input type="button" value="±" onclick="convert()">
+                <input type="button" value="ANS" onclick="getAns()">
+                <input type="button" value="√" onclick="operation(6)">
+
+        </div>
+    </div>
+
+</body>
+<script src="keyboardHandler.js"></script>
+<script src="math.js"></script>
+</html>
