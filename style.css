@@ -21,15 +21,18 @@
     border: 1px solid #000;
     border-radius: 8px 8px 8px 8px; 
 }
-html{
+/*html{
     width: 600px;
     height: 400px;
-}
+}*/
 body{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+}
+.calculator{
+    margin-top: -100px;
 }
 .keys{
     width: 350px;
@@ -60,7 +63,7 @@ body{
     top: 4px;
 }
 .keys input[type=button].result{
-    width: 179px;
+    width: 117px;
 }
 .inputField{
     width: 220px;
