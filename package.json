@@ -1,0 +1,53 @@
+{
+  "name": "Calculator",
+  "productName": "Calculator",
+  "version": "1.0.0",
+  "description": "IVS Project",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-installer": "electron-builder"
+  },
+  "build": {
+    "appId": "Calculator",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "icon.ico",
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "nsis": {
+      "installerIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico",
+      "uninstallDisplayName": "Calculator",
+      "license": "license.txt",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martafonekVOLE/IVS_Project_Calc.git"
+  },
+  "keywords": [],
+  "author": "Martin Pech, David Konečná, Krištof Šiška",
+  "license": "GNU GPL v3",
+  "bugs": {
+    "url": "https://github.com/martafonekVOLE/IVS_Project_Calc/issues"
+  },
+  "homepage": "https://github.com/martafonekVOLE/IVS_Project_Calc#readme",
+  "devDependencies": {
+    "electron-builder": "^22.9.1",
+    "electron": "^12.0.2",
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54"
+  },
+  "dependencies": {
+    "yarn": "^1.22.10"
+  }
+}
