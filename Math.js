@@ -79,7 +79,7 @@ function factorial(a){
  *  @return Returns the 1st num raised to the power of the 2nd num 
 */
 function toPower(a , b){
-    return Math.toPower(a , b);
+    return Math.pow(a , b);
 }
 
 /** 
@@ -117,10 +117,29 @@ function abs(a){
     return Math.abs(a);
 }
 
+/**
+ * @function profiling to profile optimalization by calculating selection standard deviation
+ * @returns {double} Selection standard deviation
+ */
 function profiling(/* File */){
-    var deviation = 0;
-    var numCount = 0;
-    var sum = 0;
+    let deviation = 0;
+    let numCount = 0;
+    let sum = 0;
+    let currentNum = 0;
+    /* while not at end of file (TODO) */
+    while (numCount < 100) {
+        numCount++
+        currentNum = 5; /* Get a number from file (TODO) */
+        sum = addUp(sum, currentNum);
+    }
+    
+    let average = divide(sum, numCount);
+    let firstVar = divide(1 , subtract(numCount , 1));
+    let secondVar = subtract (toPower(sum , 2) , multiply(numCount , toPower(average)));
+    let temp = multiply(firsVar , secondVar);
+    deviation=squareRoot(temp);
+
+    return deviation
 }
 
 /* End of JS MATH LIBRARY */
