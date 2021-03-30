@@ -1,3 +1,7 @@
+
+
+
+
 /*** Inserts Number into inputField ***/
 function insertNumber(number){
     if(NumbersAndOperation.calculated == 1){
@@ -21,17 +25,25 @@ function eraseAll(){
 }
 /***Object***/
 var NumbersAndOperation = {};
+NumbersAndOperation.calculated=2;
 /***Identifies Operator and printf onto intermediate Display*/
 function operation(operator){
     NumbersAndOperation.operator = operator;
     var test = parseFloat(document.getElementById('inputField').innerHTML);     //parse
-    var firstNumber;
-    if(test==""){
-        alert('NULL');      //Possible -+ change
+    if(isNaN(test)){
+        if(NumbersAndOperation.calculated==2){
+            if((parseFloat(NumbersAndOperation.firstNumber))>0){ 
+            }
+            else{
+            NumbersAndOperation.firstNumber=0;
+            }
+        }
+        document.getElementById('intermediate').innerHTML = NumbersAndOperation.firstNumber;
+        document.getElementById('inputField').innerHTML = '';
     }
     else{
-        NumbersAndOperation.firstNumber = parseFloat(document.getElementById('inputField').innerHTML);
-
+    NumbersAndOperation.firstNumber = parseFloat(document.getElementById('inputField').innerHTML);
+    
     document.getElementById('intermediate').innerHTML = NumbersAndOperation.firstNumber;
     document.getElementById('inputField').innerHTML = '';
     }
@@ -68,6 +80,14 @@ function operation(operator){
 function result(){
     var firstNumber = NumbersAndOperation.firstNumber;
     var secondNumber = parseFloat(document.getElementById('inputField').innerHTML);
+    if(isNaN(secondNumber)){
+        if(isNaN(NumbersAndOperation.Ans2)){
+            secondNumber=0;
+        }
+        else{
+        secondNumber=NumbersAndOperation.Ans2;
+        }
+    }
     if(NumbersAndOperation.operator<6){
     document.getElementById('intermediate').innerHTML = document.getElementById('intermediate').innerHTML + secondNumber;
     }
@@ -138,7 +158,7 @@ function result(){
         NumbersAndOperation.Ans1 = firstNumber;
     }
     else if(NumbersAndOperation.operator==9){
-        resultOfOperation = factorial(firstNumber);
+        resultOfOperation = factorial(Math.round(firstNumber));
         document.getElementById('inputField').innerHTML = resultOfOperation;
         NumbersAndOperation.calculated = 1;
         NumbersAndOperation.Ans = resultOfOperation;
@@ -233,6 +253,9 @@ document.addEventListener('keydown', function(event) {
     }
     else if(event.keyCode == 116){
         //Function 5
+    }
+    else if(event.keyCode == 188 || event.keyCode == 190){
+        insertNumber('.');
     }
     else if(event.keyCode == 8){
         backspace();
