@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*{
+    margin-top: +2rem;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    scroll-behavior: smooth;
+    max-width: 500px;
+    margin: auto;
+}
+body{
+    text-align: center;
+    max-width: 600px;
+}
+textarea{
+    border: 1px solid;
+    width: 400px;
+    height: 400px;
+    overflow-y: auto;
+    overflow-x: auto;
+    margin: 2rem;
+}
+.file{
+    margin-top: +2rem;
+    margin-right: -2rem;
+}
+button{
+}
