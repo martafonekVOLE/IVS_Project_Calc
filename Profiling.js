@@ -156,5 +156,5 @@ function abs(a){
     let secondVar = subtract (toPower(sum , 2) , multiply(numCount , toPower(average , 2)));
     let temp = addUp(firstVar , secondVar);
     deviation=squareRoot(temp);
-    document.getElementById('output').textContent = deviation;
+    document.getElementById('result').innerHTML = deviation;
     }
