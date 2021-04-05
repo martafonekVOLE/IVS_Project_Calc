@@ -155,5 +155,5 @@ function abs(a){
     let secondVar = subtract (sumsquared , multiply(numCount , toPower(average , 2)));
     let temp = multiply(firstVar , secondVar);
     deviation=squareRoot(temp);
-    document.getElementById('output').textContent = deviation;
+    document.getElementById('result').innerHTML = deviation;
     }
