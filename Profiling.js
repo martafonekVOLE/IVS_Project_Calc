@@ -135,17 +135,16 @@ function abs(a){
     var profilingInput = document.getElementById('output').value;
     console.log(profilingInput);
     var numbers = profilingInput.split(" ");
-    var num1 = parseInt(numbers[0]);
     var deviation = 0;
     var numCount = 0;
     var sum = 0;
     var currentNum = 0;
     var len = numbers.length;
-
+    var sumsquared = 0;
     for (var i = 0; i < len; i++){
         currentNum = parseInt(numbers[i]);
         sum = addUp(sum , currentNum);
-        console.log(sum);
+        sumsquared = addUp(sumsquared, toPower(currentNum, 2));
         numCount++;
     }
     
@@ -153,8 +152,8 @@ function abs(a){
     
     let firstVar = divide(1 , subtract(numCount , 1));
     
-    let secondVar = subtract (toPower(sum , 2) , multiply(numCount , toPower(average , 2)));
-    let temp = addUp(firstVar , secondVar);
+    let secondVar = subtract (sumsquared , multiply(numCount , toPower(average , 2)));
+    let temp = multiply(firstVar , secondVar);
     deviation=squareRoot(temp);
     document.getElementById('output').textContent = deviation;
     }
