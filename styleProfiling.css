@@ -6,6 +6,8 @@
     scroll-behavior: smooth;
     max-width: 500px;
     margin: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 body{
     text-align: center;
@@ -13,8 +15,8 @@ body{
 }
 textarea{
     border: 1px solid;
-    width: 400px;
-    height: 400px;
+    width: 380px;
+    height: 200px;
     overflow-y: auto;
     overflow-x: auto;
     margin: 2rem;
