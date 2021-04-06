@@ -15,8 +15,7 @@
       "target": [
         "nsis"
       ],
-      "icon": "icon.ico",
-      "requestedExecutionLevel": "requireAdministrator"
+      "icon": "icon.ico"
     },
     "nsis": {
       "installerIcon": "icon.ico",
