@@ -11,24 +11,11 @@
     </style>
 </head>
 <body>
+    <p style="margin-top: 2rem;">Insert numbers, or select a file to read from</p>
     <div class="file"><input type="file" name="inputFile" id="inputFile"></div>
     <textarea id="output"></textarea>
     <button onclick="profilingRun()">Spočítat</button>
     <div id="result"> </div>
-    <script src = "Profiling.js">
-     /* document.getElementById('inputFile').addEventListener('change', function() {
-        var file=new FileReader();
-        file.onload=function(){
-            document.getElementById('output').textContent=file.result;
-        }
-          
-        file.readAsText(this.files[0]);
-    }); */
-    
-    </script>
-    
-
-    
-    
+    <script src = "Profiling.js"></script>
 </body>
 </html>
