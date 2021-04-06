@@ -1,8 +1,8 @@
 {
   "name": "Calculator",
-  "productName": "Calculator",
+  "productName": "Calculator_IVS_Project",
   "version": "1.0.0",
-  "description": "IVS Project",
+  "description": "Calculator created by Martin Pech, David Konečný, Krištof Šiška",
   "main": "main.js",
   "scripts": {
     "start": "electron-forge start",
@@ -20,10 +20,13 @@
     "nsis": {
       "installerIcon": "icon.ico",
       "uninstallerIcon": "icon.ico",
-      "uninstallDisplayName": "Calculator",
+      "uninstallDisplayName": "Calculator_IVS_Project",
       "license": "license.txt",
       "oneClick": false,
       "allowToChangeInstallationDirectory": true
+    },
+    "directories": {
+      "output": "Calculator_IVS_Project"
     }
   },
   "repository": {
@@ -31,7 +34,7 @@
     "url": "git+https://github.com/martafonekVOLE/IVS_Project_Calc.git"
   },
   "keywords": [],
-  "author": "Martin Pech, David Konečná, Krištof Šiška",
+  "author": "Martin Pech, David Konečný, Krištof Šiška",
   "license": "GNU GPL v3",
   "bugs": {
     "url": "https://github.com/martafonekVOLE/IVS_Project_Calc/issues"
@@ -48,5 +51,5 @@
   },
   "dependencies": {
     "yarn": "^1.22.10"
-  }
+  }  
 }
