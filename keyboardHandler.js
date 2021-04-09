@@ -1,7 +1,3 @@
-
-
-
-
 /*** Inserts Number into inputField ***/
 function insertNumber(number){
     if(NumbersAndOperation.calculated == 1){
@@ -265,3 +261,4 @@ document.addEventListener('keydown', function(event) {
     }
 
 }, true);
+
