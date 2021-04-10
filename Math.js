@@ -1,6 +1,6 @@
 /** 
-*  @author : Krištof Šiška
-*  @licence : GNU General Public License v3
+*  @author  Krištof Šiška
+*  @licence  GNU General Public License v3
 */
 
 /** JS MATH LIBRARY FOR IVS */
