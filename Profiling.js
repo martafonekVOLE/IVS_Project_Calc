@@ -9,7 +9,7 @@
  *  @function Adds up 2 numbers 
  *  @param {double} 1st number
  *  @param {double} 2nd number
- *  @return Returns sum of the 2 numbers 
+ *  @return {double} Returns sum of the 2 numbers 
 */
 function addUp(a , b) {
     return a + b;
@@ -19,7 +19,7 @@ function addUp(a , b) {
  *  @function Subtracts 2nd number from the 1st
  *  @param {double} Number to be subtracted from
  *  @param {double} Number to be subtracted
- *  @return Returns difference between num 1 and num 2 
+ *  @return {double} Returns difference between num 1 and num 2 
 */
 function subtract(a , b) {
     return a - b;
@@ -29,7 +29,7 @@ function subtract(a , b) {
  *  @function Multiplies the 2 numbres
  *  @param {double} 1st number 
  *  @param {double} 2nd number
- *  @return Returns the multiplication value of the 2 numbers 
+ *  @return {double} Returns the multiplication value of the 2 numbers 
 */
 function multiply(a , b){
     return a * b;
@@ -39,7 +39,7 @@ function multiply(a , b){
  * @function Divides 2 numbers
  * @param {double} divident
  * @param {double} divisor
- * @return Returns Quotient of the 2 numbers 
+ * @return {dobule} Returns Quotient of the 2 numbers 
 */
 function divide(a , b){
     if (b == 0){
@@ -52,7 +52,7 @@ function divide(a , b){
 /** 
  * @function Product of all integers <= a 
  * @param {int} Highest integer
- * @return Returns the factorial of a number 
+ * @return {int} Returns the factorial of a number 
 */
 function factorial(a){
     if (a < 0){
@@ -76,7 +76,7 @@ function factorial(a){
  *  @function Repeated multiplication of a base to the power of exponent 
  *  @param {double} Base
  *  @param {double} Exponent
- *  @return Returns the 1st num raised to the power of the 2nd num 
+ *  @return {double} Returns the 1st num raised to the power of the 2nd num 
 */
 function toPower(a , b){
     return Math.pow(a , b);
@@ -104,7 +104,7 @@ function logarithm(a){
     if (a < 0){
         throw "logarithm of numbers < 0 doesnt exists"
     }
-    
+
     return Math.log(a);
 }
 
@@ -133,7 +133,6 @@ function abs(a){
 
     function profilingRun(){
     var profilingInput = document.getElementById('output').value;
-    console.log(profilingInput);
     var numbers = profilingInput.split(" ");
     var deviation = 0;
     var numCount = 0;
@@ -141,19 +140,49 @@ function abs(a){
     var currentNum = 0;
     var len = numbers.length;
     var sumsquared = 0;
+    var addUpCount = 0;
+    var toPowerCount = 0;
+    var start = performance.now();
     for (var i = 0; i < len; i++){
-        currentNum = parseInt(numbers[i]);
+        currentNum = parseFloat(numbers[i]);
         sum = addUp(sum , currentNum);
+        addUpCount++;
         sumsquared = addUp(sumsquared, toPower(currentNum, 2));
+        addUpCount++;
+        toPowerCount++;
         numCount++;
     }
-    
+
+    var stop = performance.now();
+    var timeInLoop = stop - start;
+    console.log("Time in for Loop in ms: ");
+    console.log(timeInLoop);
+
+    var divideCount = 2;
+    var subtractCount = 2;
+    var multiplyCount = 2;
+    var sqareRootCount = 1;
+
+    start = performance.now();
     let average = divide(sum, numCount);
-    
     let firstVar = divide(1 , subtract(numCount , 1));
-    
     let secondVar = subtract (sumsquared , multiply(numCount , toPower(average , 2)));
+    toPowerCount++;
     let temp = multiply(firstVar , secondVar);
     deviation=squareRoot(temp);
     document.getElementById('result').innerHTML = deviation;
-    }
+
+    stop = performance.now();
+    timeInLoop = stop - start;
+    console.log("Time in the rest of code in ms: ");
+    console.log(timeInLoop);
+    /* Print Counts for profiling purposes */
+    console.log("Num of addUps: ", addUpCount);
+    console.log("Num of toPower: ", toPowerCount);
+    console.log("Num of multiply: ", multiplyCount);
+    console.log("Num of subtract: ", subtractCount);
+    console.log("Num of divide: ", divideCount);
+    console.log("Num of squareRoot: ", sqareRootCount);
+
+    return deviation;
+}
