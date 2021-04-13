@@ -270,19 +270,19 @@ document.addEventListener('keydown', function(event) {
         eraseAll();
     }
     else if(event.keyCode == 112){
-        //Function 1
+        operation(5);
     }
     else if(event.keyCode == 113){
-        //Function 2
+        operation(6);
     }
     else if(event.keyCode == 114){
-        //Function 3
+        operation(7)
     }
     else if(event.keyCode == 115){
-        //Function 4
+        operation(8)
     }
     else if(event.keyCode == 116){
-        //Function 5
+        operation(9)
     }
     else if(event.keyCode == 188 || event.keyCode == 190){
         insertNumber('.');

@@ -1,4 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
 *{
     font-family: 'Poppins';
+    text-decoration: none;
+}
+b{
+    font-weight: 600;
+}
+ul{
+    color: #1b1a1a;
+}
+.syntaxHighlight{
+    color: green;
 }

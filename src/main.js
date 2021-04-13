@@ -59,6 +59,7 @@ app.on('ready', function(){
       submenu: [
         { role: "togglefullscreen"},
         { role: 'minimize' },
+        { role: 'reload' },
       ]
     },
     {
@@ -87,7 +88,15 @@ app.on('ready', function(){
           }
         }
       ]
-    }
+    },
+    /*{
+      label: '    ', click(){
+        console.log('Secret section found. Only for TRUE developers :-)');
+      },
+      submenu: [
+        { role: 'toggleDevTools' },
+      ]
+    },*/
   ];
   const menu = Menu.buildFromTemplate(template)
   Menu.setApplicationMenu(menu)
@@ -108,4 +117,3 @@ app.on('window-all-closed', () => {
     app.quit()
   }
 })
-
