@@ -14,6 +14,14 @@ function createWindow (set) {
     win.loadFile('profiling.html')
     set = 0;
   }
+  else if(set==2){
+    win.loadFile('help.html')
+    set = 0;
+  }
+  else if(set==3){
+    win.loadFile('dokumentace.pdf')
+    set = 0;
+  }
   else{
     win.loadFile('index.html')
   }
@@ -57,14 +65,19 @@ app.on('ready', function(){
       role: 'help',
       submenu: [
         {
-          label: 'Display Help',
+          label: 'Display Help', click(){
+            createWindow(2);
+          },
           accelerator: 'CmdOrCtrl+H'
         },
         {
           type: 'separator'
         },
         {
-          label: 'Read Documentation'
+          label: 'Read Documentation', click(){
+            var pdf ="dokumentace.pdf";
+            createWindow(3);
+          },
         },
         {
           label: 'Find More on GitHub',
