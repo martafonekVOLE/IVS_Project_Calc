@@ -1,5 +1,8 @@
-/*** Inserts Number into inputField ***/
-function insertNumber(number){
+/**
+ * @function insertNumber - Inserts given integer to inputField
+ * @param {int} number 
+ */
+ function insertNumber(number){
     if(NumbersAndOperation.calculated == 1){
         eraseAll();
         NumbersAndOperation.calculated = 0;
@@ -8,21 +11,35 @@ function insertNumber(number){
     }
     document.getElementById('inputField').innerHTML = document.getElementById('inputField').innerHTML + number;
 }
-/*Backspace function*/
+
+/**
+ * @function backspace - Erases the latest character in input field
+ */
 function backspace(){
     var backspace = document.getElementById('inputField').innerHTML;
     var backspace = backspace.slice(0, -1);
     document.getElementById('inputField').innerHTML = (backspace);
 }
-/*** Erases All the fields ***/
+
+/**
+ * @function eraseAll - Erases all the calculator fields
+ */
 function eraseAll(){
     document.getElementById('inputField').innerHTML = '';
     document.getElementById('intermediate').innerHTML = '';
 }
-/***Object***/
+
+/**
+ * @type {object} NumbersAndOperation
+ */
 var NumbersAndOperation = {};
+
 NumbersAndOperation.calculated=2;
-/***Identifies Operator and printf onto intermediate Display*/
+
+/**
+ * @function operation - Executes operation of given operator
+ * @param {char} operator - Identifier of operation
+ */
 function operation(operator){
     NumbersAndOperation.operator = operator;
     var test = parseFloat(document.getElementById('inputField').innerHTML);     //parse
@@ -43,6 +60,7 @@ function operation(operator){
     document.getElementById('intermediate').innerHTML = NumbersAndOperation.firstNumber;
     document.getElementById('inputField').innerHTML = '';
     }
+    /* Printing of given operator */
     if(operator==1){
         document.getElementById('intermediate').innerHTML = document.getElementById('intermediate').innerHTML + '+';
     }
@@ -72,7 +90,10 @@ function operation(operator){
     }
 
 }
-/*RESULT OF EPERATION*/
+
+/**
+ * @function result - Gets the result of given operation
+ */
 function result(){
     var firstNumber = NumbersAndOperation.firstNumber;
     var secondNumber = parseFloat(document.getElementById('inputField').innerHTML);
@@ -89,7 +110,7 @@ function result(){
     }
 
     if(NumbersAndOperation.operator==1){
-        /*Sčítání*/
+        /* Addition */
         resultOfOperation = addUp(firstNumber, secondNumber);
         document.getElementById('inputField').innerHTML = resultOfOperation;
         NumbersAndOperation.calculated = 1;
@@ -98,7 +119,7 @@ function result(){
         NumbersAndOperation.Ans2 = secondNumber;
     }
     else if(NumbersAndOperation.operator==2){
-        /*Odčítání*/
+        /*Subtraction*/
         resultOfOperation = subtract(firstNumber, secondNumber);
         document.getElementById('inputField').innerHTML = resultOfOperation;
         NumbersAndOperation.calculated = 1;
@@ -107,7 +128,7 @@ function result(){
         NumbersAndOperation.Ans2 = secondNumber;
     }
     else if(NumbersAndOperation.operator==3){
-        /*Násobení*/
+        /* Multiplication */
         resultOfOperation = multiply(firstNumber, secondNumber);
         document.getElementById('inputField').innerHTML = resultOfOperation;
         NumbersAndOperation.calculated = 1;
@@ -116,7 +137,7 @@ function result(){
         NumbersAndOperation.Ans2 = secondNumber;
     }
     else if(NumbersAndOperation.operator==4){
-        /*Dělení*/
+        /* Division */
         resultOfOperation = divide(firstNumber, secondNumber);
         document.getElementById('inputField').innerHTML = resultOfOperation;
         NumbersAndOperation.calculated = 1;
@@ -124,7 +145,8 @@ function result(){
         NumbersAndOperation.Ans1 = firstNumber;
         NumbersAndOperation.Ans2 = secondNumber;
     }
-    else if(NumbersAndOperation.operator==5){           //DOES NOT WORK 
+    else if(NumbersAndOperation.operator==5){         
+        /* To power */
         resultOfOperation = toPower(firstNumber, secondNumber);
         document.getElementById('inputField').innerHTML = resultOfOperation;
         NumbersAndOperation.calculated = 1;
@@ -133,6 +155,7 @@ function result(){
         NumbersAndOperation.Ans2 = secondNumber;
     }
     else if(NumbersAndOperation.operator==6){
+        /* Square root */
         resultOfOperation = squareRoot(firstNumber);
         document.getElementById('inputField').innerHTML = resultOfOperation;
         NumbersAndOperation.calculated = 1;
@@ -140,6 +163,7 @@ function result(){
         NumbersAndOperation.Ans1 = firstNumber;
     }
     else if(NumbersAndOperation.operator==7){
+        /* Logarithm */
         resultOfOperation = logarithm(firstNumber);
         document.getElementById('inputField').innerHTML = resultOfOperation;
         NumbersAndOperation.calculated = 1;
@@ -147,6 +171,7 @@ function result(){
         NumbersAndOperation.Ans1 = firstNumber;
     }
     else if(NumbersAndOperation.operator==8){
+        /* Absolute value */
         resultOfOperation = abs(firstNumber);
         document.getElementById('inputField').innerHTML = resultOfOperation;
         NumbersAndOperation.calculated = 1;
@@ -154,6 +179,7 @@ function result(){
         NumbersAndOperation.Ans1 = firstNumber;
     }
     else if(NumbersAndOperation.operator==9){
+        /* Factorial */
         resultOfOperation = factorial(Math.round(firstNumber));
         document.getElementById('inputField').innerHTML = resultOfOperation;
         NumbersAndOperation.calculated = 1;
@@ -162,7 +188,10 @@ function result(){
     }
 
 }
-/*PREVIOUS RESULT*/
+
+/**
+ * @function getAns - Gets the answer from previous calculation
+ */
 function getAns(){
     NumbersAndOperation.calculated = 1;
     document.getElementById('inputField').innerHTML = NumbersAndOperation.Ans;
@@ -171,7 +200,10 @@ function getAns(){
     NumbersAndOperation.firstNumber=NumbersAndOperation.Ans;
     }
 }
-/*CONVERT +-*/
+
+/**
+ * @function convert - Negates given value 
+ */
 function convert(){
     conversion = document.getElementById('inputField').innerHTML;
     /*if(conversion.charAt(0)=="-"){
@@ -185,7 +217,9 @@ function convert(){
     conversion = (conversion * (-1))
     document.getElementById('inputField').innerHTML = conversion;
 }
-/*KEYBOARD INPUT LISTENER*/
+/**
+ * Keyboard inputs handler
+*/
 document.addEventListener('keydown', function(event) {
     if (event.keyCode == 48 || event.keyCode == 96) {
         insertNumber(0);
@@ -261,4 +295,3 @@ document.addEventListener('keydown', function(event) {
     }
 
 }, true);
-
