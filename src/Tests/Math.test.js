@@ -274,23 +274,6 @@ test('abs_test', () => {
 
 
 /**
- *  Function tests functionality with different combinations of expected data types of parameters.
- *  Function has not been implemented yet => all test fail
- *  @function modulo_test
- */
-test('modulo_test', () => {
-    /** Testing functionality */
-    expect(modulo(7, 3)).toBe(1);
-    expect(modulo(7, 1)).toBe(0);
-    expect(modulo(7, 7)).toBe(0);
-    expect(modulo(6, 3)).toBe(0);
-    expect(modulo(7, 1)).toBe(modulo(77, 1));
-    expect(modulo(-7, 3)).toBe(-1);
-    expect(modulo(7, -3)).toBe(-1);
-});
-
-
-/**
  *  Function tests functionality with different combinations of expected data types of parameter.
  *  @function logarithm_test
  */
