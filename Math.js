@@ -134,5 +134,18 @@ function nthSquareRoot(a,b){
     Math.pow(b, 1/a);
 }
 
+/** Function export for testing */ 
+module.exports = {
+    addUp,
+    subtract,
+    multiply,
+    divide,
+    factorial,
+    toPower,
+    squareRoot,
+    logarithm,
+    abs,
+    nthSquareRoot
+}
 /* End of JS MATH LIBRARY */
 
