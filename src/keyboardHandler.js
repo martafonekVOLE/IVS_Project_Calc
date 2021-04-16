@@ -48,7 +48,12 @@ function operation(operator){
             if((parseFloat(NumbersAndOperation.firstNumber))>0){ 
             }
             else{
-            NumbersAndOperation.firstNumber=0;
+                if(operator==6){
+                    NumbersAndOperation.firstNumber=2;
+                }
+                else{
+                NumbersAndOperation.firstNumber=0;
+                }   
             }
         }
         document.getElementById('intermediate').innerHTML = NumbersAndOperation.firstNumber;
@@ -77,7 +82,7 @@ function operation(operator){
         document.getElementById('intermediate').innerHTML = document.getElementById('intermediate').innerHTML + '^';
     }
     else if (operator==6){
-        document.getElementById('intermediate').innerHTML ='√' + document.getElementById('intermediate').innerHTML;
+        document.getElementById('intermediate').innerHTML = document.getElementById('intermediate').innerHTML + '√';
     }
     else if (operator==7){
         document.getElementById('intermediate').innerHTML ='log' + document.getElementById('intermediate').innerHTML;
@@ -156,7 +161,13 @@ function result(){
     }
     else if(NumbersAndOperation.operator==6){
         /* Square root */
-        resultOfOperation = squareRoot(firstNumber);
+        if(secondNumber==0){
+            resultOfOperation = squareRoot(firstNumber);
+        }
+        else{
+            resultOfOperation = nthSquareRoot(firstNumber, secondNumber);
+            document.getElementById('intermediate').innerHTML = document.getElementById('intermediate').innerHTML + secondNumber;
+        }
         document.getElementById('inputField').innerHTML = resultOfOperation;
         NumbersAndOperation.calculated = 1;
         NumbersAndOperation.Ans = resultOfOperation;

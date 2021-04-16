@@ -132,7 +132,7 @@ function nthSquareRoot(a,b){
     if ((b < 0) && (a % 2) == 0 ){
         throw "Even nth square root of negative number doesnt exist"
     }
-    Math.pow(b, 1/a);
+    return Math.pow(b, 1/a);
 }
 
 /** Function export for testing */ 
