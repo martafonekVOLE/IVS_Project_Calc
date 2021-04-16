@@ -1,7 +1,17 @@
+/**
+ * @file Main JavaScript file for Electron app builder
+ * @author Martin Pech <xpechm00@stud.fit.vutbr.cz>
+ * @licence : GNU GPL Version 3
+ */
+
 const { app, BrowserWindow, Menu } = require('electron')
 const path = require('path')
 //const Menu = electron.Menu
 
+/**
+ * @function createWindow Creates application window with given size and content loaded
+ * @param set Defines what content is going to be loaded
+ * */
 function createWindow (set) {
   const win = new BrowserWindow({
     width: 450,
@@ -26,7 +36,9 @@ function createWindow (set) {
     win.loadFile('index.html')
   }
 }
-
+/**
+ * app.on Defines what to do when the application is "on". It contains Menu elements
+ * */
 app.on('ready', function(){
   const template = [
     {
@@ -102,6 +114,9 @@ app.on('ready', function(){
   Menu.setApplicationMenu(menu)
 });
 
+/**
+ * app.whenReady Does something when application is ready to be loaded
+ * */
 app.whenReady().then(() => {
   createWindow(0)
 

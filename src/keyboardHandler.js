@@ -1,10 +1,16 @@
 /**
+ * @file Keyboard Handler
+ * @author Martin Pech <xpechm00@stud.fit.vutbr.cz>
+ * @licence : GNU GPL Version 3
+ */
+
+/**
  * @function insertNumber - Inserts given integer to inputField
  * @param {int} number 
  */
  function insertNumber(number){
     if(NumbersAndOperation.calculated == 1){
-        eraseAll();
+        eraseField();
         NumbersAndOperation.calculated = 0;
     }
     else{
@@ -28,6 +34,12 @@ function eraseAll(){
     document.getElementById('inputField').innerHTML = '';
     document.getElementById('intermediate').innerHTML = '';
 }
+/**
+ * @function eraseField - Erases the first calculator field
+ */
+function eraseField(){
+    document.getElementById('inputField').innerHTML = '';
+}
 
 /**
  * @type {object} NumbersAndOperation
@@ -37,7 +49,7 @@ var NumbersAndOperation = {};
 NumbersAndOperation.calculated=2;
 
 /**
- * @function operation - Executes operation of given operator
+ * @function operation - Executes operation based on given operator
  * @param {char} operator - Identifier of operation
  */
 function operation(operator){
@@ -97,7 +109,7 @@ function operation(operator){
 }
 
 /**
- * @function result - Gets the result of given operation
+ * @function result - Gets the result of given operation by passing arguments to Math.js
  */
 function result(){
     var firstNumber = NumbersAndOperation.firstNumber;
@@ -198,10 +210,15 @@ function result(){
         NumbersAndOperation.Ans1 = firstNumber;
     }
 
+    NumbersAndOperation.firstNumber = resultOfOperation;
+    NumbersAndOperation.secondNumber = ' ';
+    secondNumber = ' ';
+    firstNumber = ' ';
+
 }
 
 /**
- * @function getAns - Gets the answer from previous calculation
+ * @function getAns - Gets the result of previous calculation
  */
 function getAns(){
     NumbersAndOperation.calculated = 1;
@@ -229,7 +246,7 @@ function convert(){
     document.getElementById('inputField').innerHTML = conversion;
 }
 /**
- * Keyboard inputs handler
+ * Keyboard input handler
 */
 document.addEventListener('keydown', function(event) {
     if (event.keyCode == 48 || event.keyCode == 96) {
