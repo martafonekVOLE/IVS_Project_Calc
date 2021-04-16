@@ -25,6 +25,12 @@ function backspace(){
     var backspace = document.getElementById('inputField').innerHTML;
     var backspace = backspace.slice(0, -1);
     document.getElementById('inputField').innerHTML = (backspace);
+    if(NumbersAndOperation.calculated==1){
+     document.getElementById('intermediate').innerHTML = " ";   
+    }
+    else{
+
+    }
 }
 
 /**
@@ -53,6 +59,7 @@ NumbersAndOperation.calculated=2;
  * @param {char} operator - Identifier of operation
  */
 function operation(operator){
+//TODO - make it possible to do 3+5+2+1-8 type of operations
     NumbersAndOperation.operator = operator;
     var test = parseFloat(document.getElementById('inputField').innerHTML);     //parse
     if(isNaN(test)){

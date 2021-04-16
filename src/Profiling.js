@@ -122,14 +122,20 @@ function abs(a){
  * @returns {double} Selection standard deviation
  */
 
- document.getElementById('inputFile').addEventListener('change', function() {
-    var file=new FileReader();
-    file.onload=function(){
-        document.getElementById('output').textContent=file.result;
+    document.getElementById('inputFile').addEventListener('change', function() {
+        var file=new FileReader();
+        file.onload=function(){
+            document.getElementById('output').textContent=file.result;
+        }
+        document.getElementById("resetButton").style = "display:inline";
+        file.readAsText(this.files[0]);
+    });
+
+    function resetFile(){
+        document.getElementById("resetButton").style = "display:none";
+        document.getElementById('inputFile').value='';
+        document.getElementById('output').value=" ";
     }
-      
-    file.readAsText(this.files[0]);
-});
 
     function profilingRun(){
     var profilingInput = document.getElementById('output').value;

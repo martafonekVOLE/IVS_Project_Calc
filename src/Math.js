@@ -136,6 +136,7 @@ function nthSquareRoot(a,b){
 }
 
 /** Function export for testing */ 
+/* UNCOMMENT THIS FOR TESTING!
 module.exports = {
     addUp,
     subtract,
@@ -148,5 +149,6 @@ module.exports = {
     abs,
     nthSquareRoot
 }
+*/
 /* End of JS MATH LIBRARY */
 
