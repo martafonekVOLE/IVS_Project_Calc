@@ -138,6 +138,9 @@ function abs(a){
     }
 
     function profilingRun(){
+    if(document.getElementById('output').value==''){
+        document.getElementById('output').value = '1 2 3 4 5'
+    }
     var profilingInput = document.getElementById('output').value;
     var numbers = profilingInput.split(" ");
     var deviation = 0;
