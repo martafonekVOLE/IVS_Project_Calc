@@ -29,9 +29,38 @@ Simple answer, **#Windows**.
 
 `divide` Divides two numbers *8 ÷ 4 = 2*
 
-`factorial` Calculates the factorial of number given *3! = 6*
+`factorial` Calculates the factorial of given number *3! = 6*
 
-More description to be done.
+`toPower` Calculates n-th power of given number *3 ^ 2 = 9*
+
+`squareRoot` Calculates the 2nd square root of given number *√9 = 3*
+
+`nthSquareRoot` Calculates the n-th square root of given number *4√44 = 2.575*
+
+`logarithm` Calculates logarithm to the base of 10 *log10 = 4.605*
+
+`abs` Calculates the absolute value of number given *|-23| = 23*
+
+# KEYBOARDHANDLER FUNCTIONS DESRIPTION
+`insertNumber` is called when user inserts a number
+
+`backspace` is called when user wants to erase characters one by one
+
+`eraseAll` is called when user wants to erase all displays and clear the variables
+
+`eraseField` is called there is a need of erasing inputField (the one at the bottom)
+
+`operation(operator)` is called when operator is given, it receives opcode of the operator and then behave according to it
+
+`result` is called when result of the operation is requested. It can be requested by user, or code itself
+
+`getAns` is called when previous result is requested
+
+`convert` is used to convert unsigned numbers to signed, it also works the other way
+
+`NumberAndOperation` is object
+
+`keyboardHandler` also handles key presses, if certain button is pressed, the appropriate operation is called
 
 # LICENCE 
  GNU General Public License v3 - https://www.gnu.org/licenses/gpl-3.0.en.html
@@ -47,15 +76,20 @@ If any error occures, please ready the documentation. All requirements and possi
 7) An nsis installer will pop-up. 
 8) Install the application using this installer.
 9) Your final product can be found in `shhh` folder.
+
 # DEMO TEST
 In order to test if all the files necessary for calculator were downloaded correctly and were linked together, you can run series of tests.
 First of all uncomment `module-exports` section in **Math.js** and then run `make test`. 
 
-To test profiling application, please run the preset 
+**All tests should pass!** 
+
+If any of them fails, please check if the error is not caused by small difference in decimal number. If so, you can consider the test as successfull.
+
+To test profiling application, please it up and hit run. It will start with the test input of *(1 2 3 4 5)*. Result should be displayed and should equal to *1.5811...*
 
 
 # HOW TO CONTRIBUTE?
-Content to be add...
+Project is private at the moment. No one except the Proton Team (our group of developers) cannot contribute. When the project is opened, the proccess of contribution will be very simple. We are git project *still* :wink:
 
 # PROJECT STATUS
 - [x] In development
