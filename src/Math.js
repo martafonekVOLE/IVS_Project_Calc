@@ -7,7 +7,7 @@
 /** JS MATH LIBRARY FOR IVS */
 
 /** 
- *  @function addUp Adds up up 2 numbers 
+ *  @function addUp Adds up 2 numbers 
  *  @param {double} a 1st number
  *  @param {double} b 2nd number
  *  @return {dobule} Returns sum of the 2 numbers 
@@ -27,7 +27,7 @@ function subtract(a , b) {
 }
 
 /** 
- *  @function multiply Multiplies the 2 numbres
+ *  @function multiply Multiplies the 2 numbers
  *  @param {double} a 1st number 
  *  @param {double} b 2nd number
  *  @return {double} Returns the multiplication value of the 2 numbers 
