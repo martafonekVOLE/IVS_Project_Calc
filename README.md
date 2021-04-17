@@ -22,10 +22,15 @@ Simple answer, **#Windows**.
 
 # MATHEMATICAL FUNCTIONS DESRIPTION 
 `addUp` Adds up two numbers *1 + 1 = 2*
+
 `substract` Substracts two numbers *2 - 1 = 1*
+
 `mutiply` Multiplies two numbers *2 x 4 = 8*
+
 `divide` Divides two numbers *8 ÷ 4 = 2*
+
 `factorial` Calculates the factorial of number given *3! = 6*
+
 More description to be done.
 
 # LICENCE 
