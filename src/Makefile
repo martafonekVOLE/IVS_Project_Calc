@@ -16,6 +16,8 @@ doc:
 	jsdoc $(MAIN_FOLDER)\Math.js $(TEST_PATH)\Math.test.js
 
 test:
+	@echo In order to test functions please make sure, that in "module.exports" section in Math.js is uncommented!
+	@echo In default, this part is commented due to error in debugger.
 	cd $(MAIN_FOLDER)\$(TEST_FOLDER) && npm init -y && npm test
 
 clean:
@@ -26,11 +28,11 @@ pack:
 	tar -a -c -f repo.zip $(ZIP_FILES)
 
 help:
-	@echo Pred samotnym sestavenim je nutne mit nainstalovany nasledujici software:
-	@echo 	Node.js
-	@echo 	npm
-	@echo	git
-	@echo Dalsi software nutny pro sestaveni programu bude nainstalovan automaticky
+	@echo Before building application please make sure, that you have installed following components:
+	@echo 	Node.js	(https://nodejs.org/en/)
+	@echo 	Npm	(Will be installed with Node.js)
+	@echo 	Git	(https://git-scm.com/download/win)
+	@echo All other components will be installed automatically.
 
 init:
 	npm install $(TO_INSTALL)
