@@ -67,7 +67,8 @@ Simple answer, **#Windows**.
 
 # INSTALLATION INSTRUCTIONS
 BEFORE INSTALLATION PLEASE MAKE SURE THAT YOU HAVE INSTALLED FOLLOWING SOFTWARE:
-**Git, npm **(should download with Git) **Node.js**
+
+**Git, npm** (should download with Git) **Node.js**
 
 1) First of all, download source files. You can use `.zip` files, or simply navigate to our project via terminal and url.
 2) Select a file to unzip the downloaded files, and unzip them.
