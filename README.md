@@ -68,12 +68,11 @@ Simple answer, **#Windows**.
 # INSTALLATION INSTRUCTIONS
 BEFORE INSTALLATION PLEASE MAKE SURE THAT YOU HAVE INSTALLED FOLLOWING SOFTWARE:
 
-**Git:** https://git-scm.com/download/win
-
-**Npm:** (should download with Git) 
-
+**Git:** https://git-scm.com/download/win __
+**Npm:** (should download with Git) __
 **Node.js:** https://nodejs.org/en/download/
 
+**INSTALLATION OF THIS PRODUCT:**
 1) First of all, download source files. You can use `.zip` files, or simply navigate to our project via terminal and url.
 2) Select a file to unzip the downloaded files, and unzip them.
 3) Run `make.exe` or open your command line and execute `make`.
