@@ -3,6 +3,7 @@ TEST_FOLDER = Tests
 TEST_PATH = $(MAIN_FOLDER)\$(TEST_FOLDER)
 TO_INSTALL = electron -g yarn create electron-app -g
 ZIP_FILES = help.html icon.ico index.html keyboardHandler.js libiconv2.dll libintl3.dll license.txt main.js make.exe Makefile Math.js package.json profiling.html Profiling.js style.css styleHelp.css styleProfiling.css Tests\Math.test.js Tests\package.json
+DOC_FILES = $(MAIN_FOLDER)\Math.js $(TEST_PATH)\Math.test.js $(MAIN_FOLDER)\keyboardHandler.js $(MAIN_FOLDER)\main.js
 
 
 all: init
@@ -13,7 +14,7 @@ run:
 	cd $(MAIN_FOLDER) && yarn run start
 
 doc:
-	jsdoc $(MAIN_FOLDER)\Math.js $(TEST_PATH)\Math.test.js
+	jsdoc $(DOC_FILES)
 
 test:
 	@echo In order to test functions please make sure, that in "module.exports" section in Math.js is uncommented!
