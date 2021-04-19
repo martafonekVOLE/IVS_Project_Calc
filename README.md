@@ -66,6 +66,9 @@ Simple answer, **#Windows**.
  GNU General Public License v3 - https://www.gnu.org/licenses/gpl-3.0.en.html
 
 # INSTALLATION INSTRUCTIONS
+BEFORE INSTALLATION PLEASE MAKE SURE THAT YOU HAVE INSTALLED FOLLOWING SOFTWARE:
+**Git, npm **(should download with Git) **Node.js**
+
 1) First of all, download source files. You can use `.zip` files, or simply navigate to our project via terminal and url.
 2) Select a file to unzip the downloaded files, and unzip them.
 3) Run `make.exe` or open your command line and execute `make`.
