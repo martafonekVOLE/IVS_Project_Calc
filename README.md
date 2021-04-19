@@ -75,7 +75,7 @@ If any error occures, please ready the documentation. All requirements and possi
 6) Run `Calculator_IVS_Project Setup [version].exe` file.
 7) An nsis installer will pop-up. 
 8) Install the application using this installer.
-9) Your final product can be found in `shhh` folder.
+9) Your final product can be found in selected path.
 
 # DEMO TEST
 In order to test if all the files necessary for calculator were downloaded correctly and were linked together, you can run series of tests.
