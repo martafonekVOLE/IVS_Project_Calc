@@ -1,6 +1,6 @@
 /** 
-*  @author : Krištof Šiška
-*  @licence : GNU General Public License v3
+*  @author  Krištof Šiška
+*  @licence  GNU General Public License v3
 */
 
 /** JS MATH LIBRARY FOR IVS */
@@ -141,8 +141,10 @@ function abs(a){
     if(document.getElementById('output').value==''){
         document.getElementById('output').value = '1 2 3 4 5'
     }
-    var profilingInput = document.getElementById('output').value;
-    var numbers = profilingInput.split(" ");
+    var profilingInput = document.getElementById("output").value;
+    // get rid of whitespaces at the beginning and end of input
+    var resultString = profilingInput.trim();
+    var numbers = resultString.split(" ");
     var deviation = 0;
     var numCount = 0;
     var sum = 0;
