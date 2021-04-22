@@ -1,0 +1,85 @@
+		 **Představení plánu projektu**
+-------------------------------------------------------------------
+> Pro tvorbu tohoto projektu jsme zvolili nástroj Electron.js,
+  jedná se o framework, který umožňuje vytvářet desktopové aplikace 
+  za použití JavaScriptu, HTML a CSS.
+> S tímto frameworkem nikdo z našeho týmu zkušenost nemá. Někteří
+  z nás už se ale v minulosti setkali s výše uvedenými jazyky.
+
+		     **Stanovené termíny**
+-------------------------------------------------------------------
+> 26.2.2021 - Termín první schůzky. Na schůzce jsme se pobavili
+  o představách, rozdělili jsme si úkoly. Domluvili jsme se, že 
+  další schůzky budeme realizovat v týdenních cyklech, nebude-li 
+  potřeba sejít se dříve. Dále jsme domluvili termíny dokončení
+  různých částí a zvolili jméno - Team Proton.
+> 5.3.2021 - Termín druhé schůzky. Do této schůzky si má každý člen 
+  týmu nachystat demo/návrh své části programu. Bude zde ukázáno,
+  jak na Windows pracovat s Make a jak jej zakomponovat do našeho
+  projektu. Dále zde bude představen první návrh matematické 
+  knihovny a návrh vizuální stránky projektu. Dále zde bude členům
+  týmu udělen přístup do GitHub repozitáře. Budou vytvořeny základ-
+  ní testy pro Test-driven development matematické knihovny.
+> 12.3.2021 - Očekávané dokončení částí matematické knihovny, 
+  vizuální stránky projektu, knihovny pro zadávání z kláves.
+> 18.3.2021 - Nejzazší termín odevzdání návrhu projektu
+> 19.3.2021 - Očekávané dokončení testů pro matematickou knihovnu,
+  zahájení testování knihovny pro zadávání z klávesnice, vytvoření
+  programové dokumentace pro matematickou knihovnu.
+> 26.3.2021 - Očekávaní dokončení testů knihovny pro zadávání
+  z klávesnice, dokončení uživatelské příručky. Začátek sestavo-
+  vání aplikace a jejích komponent, testování.
+> Zbytek času věnujeme úkolům, které zatím nemáme přesně napláno-
+  vané. Jedná se o bug-fixing, MockUp a další. Termíny pro dokon-
+  čování těchto úkolů budou stanoveny na posledním meetingu.
+> 29.4.2021 - Nejzazší termín odevzdání projektu!
+
+	   **Stanovené úkoly jednotlivým řešitelům**
+-------------------------------------------------------------------
+> xpechm00 /Martin Pech/
+  > Tvorba GitHub repozitáře
+  > Front-end projektu, MockUp
+  > Sestavení aplikace, debugging
+  > Tvorba instalátoru a odinstalátoru
+  > Práce na knihovně pro vstup z klávesnice
+
+> xkonec83 /David Konečný/
+  > Testy matematické knihovny a knihovny pro vstup z klávesnice
+  > Make
+  > Tvorba uživatelské dokumentace
+
+> xsiska16 /Krištof Šiška/
+  > Tvorba matematické knihovny, knihovny pro vstup z klávesnice
+  > Programová dokumentace knihoven
+
+		   **Komunikační kanály**
+-------------------------------------------------------------------
+> Jira - pro sledování postupu na jednotlivých táscích používáme
+  nástroj Jira. Tento nástroj funguje jako virtuální tabule, která 
+  umožňuje řadit různé části projektu do sekcí, ve kterých se právě
+  nalézá. Aktuálně jsou například v kategorii "Ve vývoji" tasky na
+  tvorbu matematické knihovny a na přípravu Make. 
+> Facebook - pro komunikaci mezi sebou (ohledně problémů, stanove-
+  ných termínů, nebo svolání mimořádné schůzky) využíváme Facebook.
+  Nástroj jsme zvolili pro to, že telefon má každý z nás 24/7 po 
+  ruce. Pravidla pro komunikaci jsme definovali pouza taková, že 
+  pro volání jednotlivých uživatelů používáme tagování ve skupině.
+  Pokud zpráva tag nemá, je určená všem, naopak pokud má tag, 
+  mohou ji neoznačení uživatelé ignorovat. Schůzky organizujeme 
+  přes Facebook Messenger, nebo Discord.
+
+		 **Systém pro správu verzí**
+-------------------------------------------------------------------
+> Jako systém pro správu verzí jsme vybrali GIT.
+> Jako hosting jsme vybrali GitHub
+> Jak se na hosting dostanete? Přes odkaz uvedený níže.
+> Co se v repozitáři vyskytuje? V repozitáři by měl každý člen týmu
+  vytvořit vlastní větev, do které bude commitovat svou aktuální
+  část. Pokud by se na tvorbě jedné části podílelo více lidí, budou 
+  commitovat do větve původního řešitele úkolu.
+> GitHub: https://github.com/martafonekVOLE/IVS_Project_Calc 
+
+> Edit 10.3.2021 - Všichni členové týmu byli úspěšně seznámeni s 
+  GITem, vyzkoušeli si commity a opravili po sobě první chyby.
+  K projektu byl přizván i účet ivs.kontrola@gmail.com pro kontrolu
+  správné práce s GITem cvičícími.
