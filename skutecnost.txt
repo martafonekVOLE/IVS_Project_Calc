@@ -1,0 +1,17 @@
+		 **Rozdíly oproti plánu**
+-------------------------------------------------------------------
+> Hlavním rozdílem oproti plánu bylo časové rozložení. V době, kdy
+  byl projekt plánován jsme opoměli, že máme i jiné, především 
+  školní povinnosti a projekty, a tak se bohužel né vždy podařilo 
+  dodržet stanovený termínu.
+  Ovšem každý vždy odevzdal alespoň nástřel toho, co měl do určeného
+  data splnit a v nejbližších volných dnech svůj úkol vyřešil.
+> Dalším rozdílem byly změny původní funkcionality. Měli jsme nějakou
+  představu, ale tu jsme v průběhu projektování pozměnili tak, aby 
+  více odpovídala požadavkům.
+> Změnou bylo i rozložení zátěže pro jednotlivé řešitele. Například
+  vedoucí týmu měl s tvorbou tohoto typu projektu nejvíce zkušeností,
+  takže se věnoval i taskům, které původně neměl v plánu. Stejně tak
+  mu ostatní pomohli například s tvorbou dokumentace.
+> Komunikační kanály byly beze změny.
+> Schůzky probíhaly přesně tak, jak byly naplánovány.
