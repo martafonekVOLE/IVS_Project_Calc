@@ -1,0 +1,3 @@
+xpechm00 X (GUI, Ovládání z klávesnice & předávání parametrů, MOCKUP, Instalátor a odinstalátor, Debugging, README, nápověda v aplikaci)
+xkonec83 X (Make, Testy, Dokumentace)
+xsiska16 X (Matematická knihovna, Profiling, Dokumentace)
