@@ -20,6 +20,12 @@ test:
 	@echo In order to test functions please make sure, that in "module.exports" section in Math.js is uncommented!
 	@echo In default, this part is commented due to error in debugger.
 	cd $(MAIN_FOLDER)\$(TEST_FOLDER) && npm init -y && npm test
+	
+profile:
+	@echo *****************************************
+	@echo * Press CTRL+SHIFT+P to start profiling *
+	@echo *****************************************
+	cd $(MAIN_FOLDER) && yarn run start
 
 clean:
 	rd $(MAIN_FOLDER) /S /q
