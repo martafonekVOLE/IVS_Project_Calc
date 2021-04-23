@@ -29,7 +29,7 @@ function createWindow (set) {
     set = 0;
   }
   else if(set==3){
-    win.loadFile('dokumentace.pdf')
+    win.loadFile('../dokumentace.pdf')
     set = 0;
   }
   else{

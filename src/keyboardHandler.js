@@ -6,7 +6,7 @@
 
 /**
  * @function insertNumber - Inserts given integer to inputField
- * @param {int} number 
+ * @param {int} number
  */
  function insertNumber(number){
     if(NumbersAndOperation.calculated == 1){
@@ -26,7 +26,7 @@ function backspace(){
     var backspace = backspace.slice(0, -1);
     document.getElementById('inputField').innerHTML = (backspace);
     if(NumbersAndOperation.calculated==1){
-     document.getElementById('intermediate').innerHTML = " ";   
+     document.getElementById('intermediate').innerHTML = " ";
     }
     else{
 
@@ -64,7 +64,7 @@ function operation(operator){
     var test = parseFloat(document.getElementById('inputField').innerHTML);     //parse
     if(isNaN(test)){
         if(NumbersAndOperation.calculated==2){
-            if((parseFloat(NumbersAndOperation.firstNumber))>0){ 
+            if((parseFloat(NumbersAndOperation.firstNumber))>0){
             }
             else{
                 if(operator==6){
@@ -72,7 +72,7 @@ function operation(operator){
                 }
                 else{
                 NumbersAndOperation.firstNumber=0;
-                }   
+                }
             }
         }
         document.getElementById('intermediate').innerHTML = NumbersAndOperation.firstNumber;
@@ -80,7 +80,7 @@ function operation(operator){
     }
     else{
     NumbersAndOperation.firstNumber = parseFloat(document.getElementById('inputField').innerHTML);
-    
+
     document.getElementById('intermediate').innerHTML = NumbersAndOperation.firstNumber;
     document.getElementById('inputField').innerHTML = '';
     }
@@ -113,6 +113,7 @@ function operation(operator){
         document.getElementById('intermediate').innerHTML = document.getElementById('intermediate').innerHTML + "!";
     }
 
+
 }
 
 /**
@@ -141,6 +142,7 @@ function result(){
         NumbersAndOperation.Ans = resultOfOperation;
         NumbersAndOperation.Ans1 = firstNumber;
         NumbersAndOperation.Ans2 = secondNumber;
+        NumbersAndOperation.AnsOp = operator;
     }
     else if(NumbersAndOperation.operator==2){
         /*Subtraction*/
@@ -150,6 +152,7 @@ function result(){
         NumbersAndOperation.Ans = resultOfOperation;
         NumbersAndOperation.Ans1 = firstNumber;
         NumbersAndOperation.Ans2 = secondNumber;
+        NumbersAndOperation.AnsOp = operator;
     }
     else if(NumbersAndOperation.operator==3){
         /* Multiplication */
@@ -159,6 +162,7 @@ function result(){
         NumbersAndOperation.Ans = resultOfOperation;
         NumbersAndOperation.Ans1 = firstNumber;
         NumbersAndOperation.Ans2 = secondNumber;
+        NumbersAndOperation.AnsOp = operator;
     }
     else if(NumbersAndOperation.operator==4){
         /* Division */
@@ -168,8 +172,9 @@ function result(){
         NumbersAndOperation.Ans = resultOfOperation;
         NumbersAndOperation.Ans1 = firstNumber;
         NumbersAndOperation.Ans2 = secondNumber;
+        NumbersAndOperation.AnsOp = operator;
     }
-    else if(NumbersAndOperation.operator==5){         
+    else if(NumbersAndOperation.operator==5){
         /* To power */
         resultOfOperation = toPower(firstNumber, secondNumber);
         document.getElementById('inputField').innerHTML = resultOfOperation;
@@ -177,6 +182,7 @@ function result(){
         NumbersAndOperation.Ans = resultOfOperation;
         NumbersAndOperation.Ans1 = firstNumber;
         NumbersAndOperation.Ans2 = secondNumber;
+        NumbersAndOperation.AnsOp = operator;
     }
     else if(NumbersAndOperation.operator==6){
         /* Square root */
@@ -191,6 +197,7 @@ function result(){
         NumbersAndOperation.calculated = 1;
         NumbersAndOperation.Ans = resultOfOperation;
         NumbersAndOperation.Ans1 = firstNumber;
+        NumbersAndOperation.AnsOp = operator;
     }
     else if(NumbersAndOperation.operator==7){
         /* Logarithm */
@@ -199,6 +206,7 @@ function result(){
         NumbersAndOperation.calculated = 1;
         NumbersAndOperation.Ans = resultOfOperation;
         NumbersAndOperation.Ans1 = firstNumber;
+        NumbersAndOperation.AnsOp = operator;
     }
     else if(NumbersAndOperation.operator==8){
         /* Absolute value */
@@ -207,6 +215,7 @@ function result(){
         NumbersAndOperation.calculated = 1;
         NumbersAndOperation.Ans = resultOfOperation;
         NumbersAndOperation.Ans1 = firstNumber;
+        NumbersAndOperation.AnsOp = operator;
     }
     else if(NumbersAndOperation.operator==9){
         /* Factorial */
@@ -215,12 +224,14 @@ function result(){
         NumbersAndOperation.calculated = 1;
         NumbersAndOperation.Ans = resultOfOperation;
         NumbersAndOperation.Ans1 = firstNumber;
+        NumbersAndOperation.AnsOp = operator;
     }
 
     NumbersAndOperation.firstNumber = resultOfOperation;
     NumbersAndOperation.secondNumber = ' ';
     secondNumber = ' ';
     firstNumber = ' ';
+    NumbersAndOperation.AnsOp=' ';
 
 }
 
@@ -237,7 +248,7 @@ function getAns(){
 }
 
 /**
- * @function convert - Negates given value 
+ * @function convert - Negates given value
  */
 function convert(){
     conversion = document.getElementById('inputField').innerHTML;
@@ -326,7 +337,7 @@ document.addEventListener('keydown', function(event) {
         backspace();
     }
     else{
-        
+
     }
 
 }, true);
