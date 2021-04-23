@@ -29,7 +29,6 @@ profile:
 
 clean:
 	rd $(MAIN_FOLDER) /S /q
-	rd node_modules /S /q 
 
 pack:
 	tar -a -c -f repo.zip $(ZIP_FILES)
