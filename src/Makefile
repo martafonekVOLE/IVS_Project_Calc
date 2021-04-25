@@ -20,7 +20,7 @@ test:
 	@echo In order to test functions please make sure, that in "module.exports" section in Math.js is uncommented!
 	@echo In default, this part is commented due to error in debugger.
 	cd $(MAIN_FOLDER)\$(TEST_FOLDER) && npm init -y && npm test
-	
+
 profile:
 	@echo *****************************************
 	@echo * Press CTRL+SHIFT+P to start profiling *
@@ -42,7 +42,7 @@ help:
 
 init:
 	npm install $(TO_INSTALL)
-	create-electron-app $(MAIN_FOLDER) 
+	create-electron-app $(MAIN_FOLDER)
 	copy * /Y $(MAIN_FOLDER)
 	md $(TEST_PATH)
 	copy tests\* $(TEST_PATH)

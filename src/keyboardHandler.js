@@ -59,6 +59,7 @@ NumbersAndOperation.calculated=2;
  * @param {char} operator - Identifier of operation
  */
 function operation(operator){
+  //KONTROLUJ PR8ZDNÝ VSTUPNÍ POLE -> CHANGE
 //TODO - make it possible to do 3+5+2+1-8 type of operations
     NumbersAndOperation.operator = operator;
     var test = parseFloat(document.getElementById('inputField').innerHTML);     //parse
@@ -75,15 +76,23 @@ function operation(operator){
                 }
             }
         }
+
+        else if(NumbersAndOperation.firstNumber == NumbersAndOperation.Ans1){
+          if(operator==6){
+          NumbersAndOperation.firstNumber = 2;
+          }
+        }
         document.getElementById('intermediate').innerHTML = NumbersAndOperation.firstNumber;
         document.getElementById('inputField').innerHTML = '';
     }
     else{
     NumbersAndOperation.firstNumber = parseFloat(document.getElementById('inputField').innerHTML);
-
     document.getElementById('intermediate').innerHTML = NumbersAndOperation.firstNumber;
     document.getElementById('inputField').innerHTML = '';
     }
+
+
+
     /* Printing of given operator */
     if(operator==1){
         document.getElementById('intermediate').innerHTML = document.getElementById('intermediate').innerHTML + '+';
