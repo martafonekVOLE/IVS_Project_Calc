@@ -51,8 +51,15 @@ function eraseField(){
  * @type {object} NumbersAndOperation
  */
 var NumbersAndOperation = {};
+NumbersAndOperation.screen = 0;
+NumbersAndOperation.calculated = 2;
+NumbersAndOperation.Ans = 0;
+NumbersAndOperation.Ans1 = 0;
+NumbersAndOperation.Ans2 = 0;
+NumbersAndOperation.operator = "";
+NumbersAndOperation.firstNumber = 0;
+NumbersAndOperation.secondNumber = 0;
 
-NumbersAndOperation.calculated=2;
 
 /**
  * @function operation - Executes operation based on given operator
@@ -90,10 +97,12 @@ function operation(operator){
     document.getElementById('intermediate').innerHTML = NumbersAndOperation.firstNumber;
     document.getElementById('inputField').innerHTML = '';
     }
+    printScreen(operator, 1);
 
-
-
+  }
+    function printScreen(operator, caller){
     /* Printing of given operator */
+    NumbersAndOperation.screen = 1;
     if(operator==1){
         document.getElementById('intermediate').innerHTML = document.getElementById('intermediate').innerHTML + '+';
     }
@@ -122,13 +131,21 @@ function operation(operator){
         document.getElementById('intermediate').innerHTML = document.getElementById('intermediate').innerHTML + "!";
     }
 
-
+    if(caller==2){
+      result();
+    }
 }
+
+
 
 /**
  * @function result - Gets the result of given operation by passing arguments to Math.js
  */
 function result(){
+    if(NumbersAndOperation.screen == 0){
+      printScreen(NumbersAndOperation.operator, 2);
+    }
+    else{
     var firstNumber = NumbersAndOperation.firstNumber;
     var secondNumber = parseFloat(document.getElementById('inputField').innerHTML);
     if(isNaN(secondNumber)){
@@ -140,9 +157,9 @@ function result(){
         }
     }
     if(NumbersAndOperation.operator<6){
+
     document.getElementById('intermediate').innerHTML = document.getElementById('intermediate').innerHTML + secondNumber;
     }
-
     if(NumbersAndOperation.operator==1){
         /* Addition */
         resultOfOperation = addUp(firstNumber, secondNumber);
@@ -151,7 +168,6 @@ function result(){
         NumbersAndOperation.Ans = resultOfOperation;
         NumbersAndOperation.Ans1 = firstNumber;
         NumbersAndOperation.Ans2 = secondNumber;
-        NumbersAndOperation.AnsOp = operator;
     }
     else if(NumbersAndOperation.operator==2){
         /*Subtraction*/
@@ -161,7 +177,6 @@ function result(){
         NumbersAndOperation.Ans = resultOfOperation;
         NumbersAndOperation.Ans1 = firstNumber;
         NumbersAndOperation.Ans2 = secondNumber;
-        NumbersAndOperation.AnsOp = operator;
     }
     else if(NumbersAndOperation.operator==3){
         /* Multiplication */
@@ -171,7 +186,6 @@ function result(){
         NumbersAndOperation.Ans = resultOfOperation;
         NumbersAndOperation.Ans1 = firstNumber;
         NumbersAndOperation.Ans2 = secondNumber;
-        NumbersAndOperation.AnsOp = operator;
     }
     else if(NumbersAndOperation.operator==4){
         /* Division */
@@ -181,7 +195,6 @@ function result(){
         NumbersAndOperation.Ans = resultOfOperation;
         NumbersAndOperation.Ans1 = firstNumber;
         NumbersAndOperation.Ans2 = secondNumber;
-        NumbersAndOperation.AnsOp = operator;
     }
     else if(NumbersAndOperation.operator==5){
         /* To power */
@@ -191,7 +204,6 @@ function result(){
         NumbersAndOperation.Ans = resultOfOperation;
         NumbersAndOperation.Ans1 = firstNumber;
         NumbersAndOperation.Ans2 = secondNumber;
-        NumbersAndOperation.AnsOp = operator;
     }
     else if(NumbersAndOperation.operator==6){
         /* Square root */
@@ -206,7 +218,6 @@ function result(){
         NumbersAndOperation.calculated = 1;
         NumbersAndOperation.Ans = resultOfOperation;
         NumbersAndOperation.Ans1 = firstNumber;
-        NumbersAndOperation.AnsOp = operator;
     }
     else if(NumbersAndOperation.operator==7){
         /* Logarithm */
@@ -215,7 +226,6 @@ function result(){
         NumbersAndOperation.calculated = 1;
         NumbersAndOperation.Ans = resultOfOperation;
         NumbersAndOperation.Ans1 = firstNumber;
-        NumbersAndOperation.AnsOp = operator;
     }
     else if(NumbersAndOperation.operator==8){
         /* Absolute value */
@@ -224,7 +234,6 @@ function result(){
         NumbersAndOperation.calculated = 1;
         NumbersAndOperation.Ans = resultOfOperation;
         NumbersAndOperation.Ans1 = firstNumber;
-        NumbersAndOperation.AnsOp = operator;
     }
     else if(NumbersAndOperation.operator==9){
         /* Factorial */
@@ -233,15 +242,15 @@ function result(){
         NumbersAndOperation.calculated = 1;
         NumbersAndOperation.Ans = resultOfOperation;
         NumbersAndOperation.Ans1 = firstNumber;
-        NumbersAndOperation.AnsOp = operator;
     }
 
+    NumbersAndOperation.calculated = 1;
     NumbersAndOperation.firstNumber = resultOfOperation;
     NumbersAndOperation.secondNumber = ' ';
     secondNumber = ' ';
     firstNumber = ' ';
-    NumbersAndOperation.AnsOp=' ';
-
+    NumbersAndOperation.screen = 0;
+  }
 }
 
 /**
