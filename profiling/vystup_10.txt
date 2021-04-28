@@ -1,0 +1,17 @@
+INPUT:
+1 4.1 7.2 10.3 13.4 16.5 19.6 22.7 25.8 28.9 
+
+PROFILING:
+Time in for Loop in ms: 
+0.014999997802078724
+Time in the rest of code in ms: 
+0.08499999961350113
+Num of addUps:  20
+Num of toPower:  11
+Num of multiply:  2
+Num of subtract:  2
+Num of divide:  2
+Num of squareRoot:  1
+
+
+9.385716097702225
