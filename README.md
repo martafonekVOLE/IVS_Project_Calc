@@ -74,7 +74,7 @@ BEFORE INSTALLATION PLEASE MAKE SURE THAT YOU HAVE INSTALLED FOLLOWING SOFTWARE:
 
 **INSTALLATION OF THIS PRODUCT:**
 1) First of all, download source files. You can use `.zip` files, or simply navigate to our project via terminal and url.
-2) Select a file to unzip the downloaded files, and unzip them.
+2) Select a destination for unziped files, unzip them and navigate into src folder
 3) Run `make.exe` or open your command line and execute `make`.
 4) Wait until all important contents will be downloaded.
 If any error occures, please ready the documentation. All requirements and possible solutions can be found there.
