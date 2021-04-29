@@ -76,6 +76,7 @@ BEFORE INSTALLATION PLEASE MAKE SURE THAT YOU HAVE INSTALLED FOLLOWING SOFTWARE:
 1) First of all, download source files. You can use `.zip` files, or simply navigate to our project via terminal and url.
 2) Select a destination for unziped files, unzip them and navigate into src folder
 3) Run `make.exe` or open your command line and execute `make`.
+Note: *make & make doc may cause issues due to known make.exe bug. If so, download different version of make from http://gnuwin32.sourceforge.net/packages/make.htm*
 4) Wait until all important contents will be downloaded.
 If any error occures, please ready the documentation. All requirements and possible solutions can be found there.
 5) Navigate into `IVS-Project-Calc` folder.
