@@ -16,9 +16,12 @@ run:
 doc:
 	jsdoc $(DOC_FILES)
 
-test:
-	@echo In order to test functions please make sure, that in "module.exports" section in Math.js is uncommented!
-	@echo In default, this part is commented due to error in debugger.
+test:	
+	@echo *************************************************************************
+	@echo * In order to test functions please make sure, that in "module.exports"	*
+	@echo * section in Math.js is uncommented! 					*
+	@echo * In default, this part is commented due to error in debugger.		*				 
+	@echo *************************************************************************
 	cd $(MAIN_FOLDER)\$(TEST_FOLDER) && npm init -y && npm test
 
 profile:
