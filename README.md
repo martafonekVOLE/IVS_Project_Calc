@@ -92,7 +92,7 @@ First of all uncomment `module-exports` section in **Math.js** and then run `mak
 
 If any of them fails, please check if the error is not caused by small difference in decimal number. If so, you can consider the test as successfull.
 
-To test profiling application, please it up and hit run. It will start with the test input of *(1 2 3 4 5)*. Result should be displayed and should equal to *1.5811...*
+To test profiling application, please open it up and hit run. It will start with the test input of *(1 2 3 4 5)*. Result should be displayed and should equal to *1.5811...*
 
 
 # HOW TO CONTRIBUTE?
