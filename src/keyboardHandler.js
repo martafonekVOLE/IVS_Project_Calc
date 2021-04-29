@@ -66,8 +66,6 @@ NumbersAndOperation.secondNumber = 0;
  * @param {char} operator - Identifier of operation
  */
 function operation(operator){
-  //KONTROLUJ PR8ZDNÝ VSTUPNÍ POLE -> CHANGE
-//TODO - make it possible to do 3+5+2+1-8 type of operations
     NumbersAndOperation.operator = operator;
     var test = parseFloat(document.getElementById('inputField').innerHTML);     //parse
     if(isNaN(test)){
