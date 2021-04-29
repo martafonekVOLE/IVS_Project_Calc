@@ -1,3 +1,3 @@
 xpechm00 100 (GUI, Ovládání z klávesnice & předávání parametrů, MOCKUP, Instalátor a odinstalátor, Debugging, README, nápověda v aplikaci)
-xkonec83 100 (Make, Testy, Dokumentace)
+xkonec83 100 (Make, Testy, Dokumentace, Slidy prezentace)
 xsiska16 100 (Matematická knihovna, Profiling, Dokumentace)
