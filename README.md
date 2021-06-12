@@ -1,5 +1,6 @@
 # IVS_Project_Calc
-IVS 2021 project. Building Electron.js application for Windows (building via JavaScript, HTML, CSS). 
+IVS 2021 school project (FIT VUT BRNO, CZ). Building Electron.js application for Windows (building via JavaScript, HTML, CSS).
+**Final evaluation:** 138/156 points
 # INTRODUCTION
 ### What is this project about?
 Well, our task was to create a *calculator* using any type of tools.
