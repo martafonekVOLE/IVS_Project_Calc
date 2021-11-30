@@ -102,5 +102,5 @@ To test profiling application, please open it up and hit run. It will start with
 Project is private at the moment. No one except the Proton Team (our group of developers) cannot contribute. When the project is opened, the proccess of contribution will be very simple. We are git project *still* :wink:
 
 # PROJECT STATUS
-- [x] In development
-- [ ] Finished
+- [ ] In development
+- [x] Finished
